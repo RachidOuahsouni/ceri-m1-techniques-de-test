@@ -31,6 +31,7 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
 
+#jout de ces lignes comme indiquer sur le site codecov
 workflows:
   build-and-test:
     jobs:
