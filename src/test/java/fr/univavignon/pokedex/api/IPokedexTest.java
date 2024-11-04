@@ -9,6 +9,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
 public class IPokedexTest {
@@ -25,7 +26,6 @@ public class IPokedexTest {
         bulbizarre = new Pokemon(0, "Bulbizarre", 126, 126, 90, 613, 64, 4000, 4, 56);
         aquali = new Pokemon(133, "Aquali", 186, 168, 260, 2729, 202, 5000, 4, 100);
 
-        // Mock d'une liste de Pokémon
         List<Pokemon> pokemons = new ArrayList<>();
         pokemons.add(bulbizarre);
         pokemons.add(aquali);
@@ -33,6 +33,9 @@ public class IPokedexTest {
         when(pokedex.getPokemon(0)).thenReturn(bulbizarre);
         when(pokedex.getPokemon(133)).thenReturn(aquali);
         when(pokedex.getPokemons()).thenReturn(pokemons);
+
+        // Configurer le mock pour lancer une exception pour un ID invalide
+        doThrow(new PokedexException("Invalid ID")).when(pokedex).getPokemon(999);
     }
 
     @Test
