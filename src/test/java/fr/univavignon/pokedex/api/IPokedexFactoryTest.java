@@ -20,8 +20,6 @@ public class IPokedexFactoryTest {
         metadataProvider=Mockito.mock(IPokemonMetadataProvider.class);
 
     }
-
-
     
     @Test
     public void testCreatePokedex(){
