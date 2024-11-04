@@ -1,40 +1,31 @@
 package fr.univavignon.pokedex.api;
 
-import org.junit.Before;
-import org.junit.Test;
-import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
-import static org.junit.Assert.assertNotNull;
-import static org.mockito.Mockito.when;
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 public class IPokedexFactoryTest {
-
-    @Mock
-    private IPokedexFactory pokedexFactory;
-
-    @Mock
+    private IPokedexFactory iPokedexFactory;
+    private IPokemonFactory iPokemonFactory;
     private IPokemonMetadataProvider metadataProvider;
+    private IPokedex iPokedex;
 
-    @Mock
-    private IPokemonFactory pokemonFactory;
+    @BeforeEach
+    public void setUp(){
+        iPokedexFactory= Mockito.mock(IPokedexFactory.class);
+        iPokemonFactory=Mockito.mock(IPokemonFactory.class);
+        metadataProvider=Mockito.mock(IPokemonMetadataProvider.class);
 
-    @Mock
-    private IPokedex pokedex;
-
-    @Before
-    public void setUp() {
-        // Initialisation des mocks
-        MockitoAnnotations.initMocks(this);
-
-        // Simulation de la création d'une instance de IPokedex avec la factory
-        when(pokedexFactory.createPokedex(metadataProvider, pokemonFactory)).thenReturn(pokedex);
     }
 
+
+    
     @Test
-    public void testCreatePokedex() {
-        // Teste si la factory retourne bien un objet IPokedex non null
-        IPokedex createdPokedex = pokedexFactory.createPokedex(metadataProvider, pokemonFactory);
-        assertNotNull(createdPokedex);
+    public void testCreatePokedex(){
+        when(iPokedexFactory.createPokedex(metadataProvider,iPokemonFactory)).thenReturn(iPokedex);
+        assertEquals(iPokedex,iPokedexFactory.createPokedex(metadataProvider,iPokemonFactory));
     }
 }
