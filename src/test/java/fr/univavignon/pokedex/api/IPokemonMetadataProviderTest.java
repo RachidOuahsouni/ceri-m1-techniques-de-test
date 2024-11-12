@@ -6,6 +6,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 public class IPokemonMetadataProviderTest {
@@ -28,6 +29,9 @@ public class IPokemonMetadataProviderTest {
         // Mock pour récupérer les métadonnées des Pokémon
         when(pokemonMetadataProvider.getPokemonMetadata(0)).thenReturn(bulbizarreMetadata);
         when(pokemonMetadataProvider.getPokemonMetadata(133)).thenReturn(aqualiMetadata);
+
+        // Ajouter le comportement pour un index invalide (exemple)
+        when(pokemonMetadataProvider.getPokemonMetadata(9999)).thenThrow(new PokedexException("Invalid index"));
     }
 
     @Test
@@ -41,6 +45,14 @@ public class IPokemonMetadataProviderTest {
         metadata = pokemonMetadataProvider.getPokemonMetadata(133);
         assertEquals("Aquali", metadata.getName());
         assertEquals(186, metadata.getAttack());
+    }
+
+    @Test
+    public void testGetPokemonMetadataThrowsException() {
+        // Test pour vérifier qu'une exception est levée pour un index invalide
+        assertThrows(PokedexException.class, () -> {
+            pokemonMetadataProvider.getPokemonMetadata(9999);
+        }, "Expected PokedexException to be thrown");
     }
 
     @Test
