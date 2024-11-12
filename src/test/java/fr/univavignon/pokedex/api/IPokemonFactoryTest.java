@@ -61,4 +61,47 @@ public class IPokemonFactoryTest {
         pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
         assertEquals(2729, pokemon.getCp());
     }
+
+    @Test
+    public void testGetHp() {
+        // Test pour vérifier le HP du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals(64, pokemon.getHp());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals(202, pokemon.getHp());
+    }
+
+    @Test
+    public void testGetDust() {
+        // Test pour vérifier le Dust du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals(4000, pokemon.getDust());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals(5000, pokemon.getDust());
+    }
+
+    @Test
+    public void testGetCandy() {
+        // Test pour vérifier le Candy du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals(4, pokemon.getCandy());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals(4, pokemon.getCandy());
+    }
+
+    @Test
+    public void testGetIv() {
+        // Test pour vérifier le IV du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals(56.0, pokemon.getIv());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals(100.0, pokemon.getIv());
+    }
+
+
+
 }
