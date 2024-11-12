@@ -56,4 +56,14 @@ public class IPokemonTrainerFactoryTest {
         PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory);
         assertEquals(Team.MYSTIC, trainer.getTeam());
     }
+
+    @Test
+    public void testGetPokedex() {
+        // Test pour vérifier que le Pokedex du dresseur est correctement initialisé
+        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory);
+
+        // Vérification que le Pokedex du dresseur est bien celui que nous avons mocké
+        assertEquals(pokedex, trainer.getPokedex());
+    }
+
 }
