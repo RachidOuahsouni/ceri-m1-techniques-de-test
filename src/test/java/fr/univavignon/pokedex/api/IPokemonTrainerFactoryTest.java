@@ -1,11 +1,11 @@
 package fr.univavignon.pokedex.api;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
 public class IPokemonTrainerFactoryTest {
@@ -21,18 +21,24 @@ public class IPokemonTrainerFactoryTest {
 
     private PokemonTrainer pokemonTrainer;
 
-    @Before
+    @BeforeEach
     public void setUp() {
-        MockitoAnnotations.initMocks(this);
+        // Initialisation des mocks
+        MockitoAnnotations.openMocks(this);
 
+        // Création d'un dresseur Pokémon pour les tests
         pokemonTrainer = new PokemonTrainer("Rachid", Team.MYSTIC, pokedex);
 
+        // Mock pour la création du dresseur Pokémon
         when(pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory)).thenReturn(pokemonTrainer);
     }
 
     @Test
     public void testCreateTrainer() {
+        // Test pour créer un dresseur Pokémon
         PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory);
+
+        // Vérification des informations du dresseur
         assertEquals("Rachid", trainer.getName());
         assertEquals(Team.MYSTIC, trainer.getTeam());
     }
