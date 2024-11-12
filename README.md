@@ -14,6 +14,11 @@ Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant 
 
 Durant cette série de TPs, le gestionnaire de version Git sera utilisé à foison, à travers la plateforme GitHub. Si vous n’êtes pas à l’aise avec cet outil[^1], [voici](http://rogerdudler.github.io/git-guide/) un petit guide à garder sous la main.
 
+## Badges
+
+[![CircleCI](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master)
+[![codecov](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test/graph/badge.svg?token=SJZTBVQ2OK)](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test)
+
 ## Sujets
 
 L'ensemble des sujets de TPs peut être trouvé dans le dossier `TPs`.
