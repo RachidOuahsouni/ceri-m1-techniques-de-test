@@ -77,5 +77,27 @@ public class IPokemonMetadataProviderTest {
         assertEquals(168, metadata.getDefense());
     }
 
+    @Test
+    public void testGetIndex() throws PokedexException {
+        // Test pour vérifier l'index du Pokémon
+        PokemonMetadata metadata = pokemonMetadataProvider.getPokemonMetadata(0);
+        assertEquals(0, metadata.getIndex());
+
+        metadata = pokemonMetadataProvider.getPokemonMetadata(133);
+        assertEquals(133, metadata.getIndex());
+    }
+
+
+    @Test
+    public void testGetStamina() throws PokedexException {
+        // Test pour vérifier le niveau de stamina du Pokémon
+        PokemonMetadata metadata = pokemonMetadataProvider.getPokemonMetadata(0);
+        assertEquals(90, metadata.getStamina());
+
+        metadata = pokemonMetadataProvider.getPokemonMetadata(133);
+        assertEquals(260, metadata.getStamina());
+    }
+
+
 
 }
