@@ -14,10 +14,28 @@ Pour cela nous allons réaliser un projet logiciel de petite taille, en suivant 
 
 Durant cette série de TPs, le gestionnaire de version Git sera utilisé à foison, à travers la plateforme GitHub. Si vous n’êtes pas à l’aise avec cet outil[^1], [voici](http://rogerdudler.github.io/git-guide/) un petit guide à garder sous la main.
 
+## Informations
+
+- **Nom et Prénom** : Rachid Ouahsouni
+- **Groupe** : M1 Ingénierie du Logiciel de la Societe numérique (ILSEN) CLA 
+
 ## Badges
 
 [![CircleCI](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master)
 [![codecov](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test/graph/badge.svg?token=SJZTBVQ2OK)](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test)
+
+## Outils et Technologies
+
+- **Langage** : Java
+- **Outils de Test** : JUnit, Mockito
+- **Intégration Continue** : CircleCI
+- **Couverture de Test** : JaCoCo et Codecov
+
+### Choix Techniques
+
+- **Mocks avec Mockito** : Mockito a été utilisé pour simuler les interactions avec les différentes interfaces, ce qui permet de tester indépendamment chaque composant du système.
+- **JaCoCo pour la couverture de code** : Le plugin JaCoCo est configuré pour mesurer la couverture de test du code et générer des rapports, qui sont ensuite envoyés sur Codecov.
+- **CircleCI pour l'intégration continue** : CircleCI a été choisi pour automatiser l'exécution des tests et s'assurer que le code est testé à chaque commit.
 
 ## Sujets
 
