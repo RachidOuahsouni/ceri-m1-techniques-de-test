@@ -8,6 +8,7 @@ import org.mockito.MockitoAnnotations;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.when;
 
@@ -54,4 +55,13 @@ public class IPokedexTest {
         assertEquals("Bulbizarre", pokemons.get(0).getName());
         assertEquals("Aquali", pokemons.get(1).getName());
     }
+
+    @Test
+    public void testPokedexException() {
+        Exception exception = assertThrows(PokedexException.class, () -> {
+            throw new PokedexException("Test exception");
+        });
+        assertEquals("Test exception", exception.getMessage());
+    }
+
 }
