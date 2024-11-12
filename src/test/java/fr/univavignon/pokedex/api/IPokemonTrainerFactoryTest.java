@@ -42,4 +42,18 @@ public class IPokemonTrainerFactoryTest {
         assertEquals("Rachid", trainer.getName());
         assertEquals(Team.MYSTIC, trainer.getTeam());
     }
+
+    @Test
+    public void testCreateTrainerName() {
+        // Test pour vérifier le nom du dresseur créé
+        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory);
+        assertEquals("Rachid", trainer.getName());
+    }
+
+    @Test
+    public void testCreateTrainerTeam() {
+        // Test pour vérifier l'équipe du dresseur créé
+        PokemonTrainer trainer = pokemonTrainerFactory.createTrainer("Rachid", Team.MYSTIC, pokedexFactory);
+        assertEquals(Team.MYSTIC, trainer.getTeam());
+    }
 }

@@ -41,4 +41,24 @@ public class IPokemonFactoryTest {
         assertEquals("Aquali", pokemon.getName());
         assertEquals(2729, pokemon.getCp());
     }
+
+    @Test
+    public void testCreatePokemonName() {
+        // Test pour vérifier le nom du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals("Bulbizarre", pokemon.getName());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals("Aquali", pokemon.getName());
+    }
+
+    @Test
+    public void testCreatePokemonCp() {
+        // Test pour vérifier le CP du Pokémon créé
+        Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
+        assertEquals(613, pokemon.getCp());
+
+        pokemon = pokemonFactory.createPokemon(133, 2729, 202, 5000, 4);
+        assertEquals(2729, pokemon.getCp());
+    }
 }

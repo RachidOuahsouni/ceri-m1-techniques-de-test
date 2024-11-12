@@ -42,4 +42,26 @@ public class IPokemonMetadataProviderTest {
         assertEquals("Aquali", metadata.getName());
         assertEquals(186, metadata.getAttack());
     }
+
+    @Test
+    public void testGetPokemonMetadataName() throws PokedexException {
+        // Test pour vérifier le nom du Pokémon
+        PokemonMetadata metadata = pokemonMetadataProvider.getPokemonMetadata(0);
+        assertEquals("Bulbizarre", metadata.getName());
+
+        metadata = pokemonMetadataProvider.getPokemonMetadata(133);
+        assertEquals("Aquali", metadata.getName());
+    }
+
+    @Test
+    public void testGetPokemonMetadataStats() throws PokedexException {
+        // Test pour vérifier les statistiques d'attaque et de défense
+        PokemonMetadata metadata = pokemonMetadataProvider.getPokemonMetadata(0);
+        assertEquals(126, metadata.getAttack());
+        assertEquals(126, metadata.getDefense());
+
+        metadata = pokemonMetadataProvider.getPokemonMetadata(133);
+        assertEquals(186, metadata.getAttack());
+        assertEquals(168, metadata.getDefense());
+    }
 }
