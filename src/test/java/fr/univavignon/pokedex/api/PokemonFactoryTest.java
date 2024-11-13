@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class PokemonFactoryTest {
 
     @Test
-    void testCreatePokemon() {
+    void testCreatePokemon() throws PokedexException {
         // Setup
         IPokemonMetadataProvider metadataProvider = new PokemonMetadataProvider();
         PokemonFactory factory = new PokemonFactory(metadataProvider);
@@ -27,13 +27,8 @@ class PokemonFactoryTest {
         assertEquals(3, pokemon.getCandy());
 
         // Test d'index invalide
-        Pokemon invalidPokemon = factory.createPokemon(-1, 100, 100, 2000, 3);
-
-        // Vérifie que l'index invalide retourne bien null
-        assertNull(invalidPokemon, "Pokemon creation with invalid index should return null");
-
-        // Test si l'exception est bien gérée (affichage de l'erreur dans la sortie standard)
-        factory.createPokemon(-1, 100, 100, 2000, 3);
-        fail("PokedexException should have been thrown");
+        assertThrows(PokedexException.class, () -> {
+            factory.createPokemon(-1, 100, 100, 2000, 3);
+        }, "PokedexException should have been thrown");
     }
 }
