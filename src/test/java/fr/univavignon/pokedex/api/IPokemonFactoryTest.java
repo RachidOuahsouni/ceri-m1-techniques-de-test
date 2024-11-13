@@ -17,7 +17,7 @@ public class IPokemonFactoryTest {
     private Pokemon aquali;
 
     @BeforeEach
-    public void setUp() {
+    public void setUp() throws PokedexException {
         // Initialise les mocks
         MockitoAnnotations.openMocks(this);
 
@@ -31,7 +31,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testCreatePokemon() {
+    public void testCreatePokemon() throws PokedexException {
         // Test pour créer un Pokémon à partir des métadonnées
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals("Bulbizarre", pokemon.getName());
@@ -43,7 +43,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testCreatePokemonName() {
+    public void testCreatePokemonName() throws PokedexException {
         // Test pour vérifier le nom du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals("Bulbizarre", pokemon.getName());
@@ -53,7 +53,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testCreatePokemonCp() {
+    public void testCreatePokemonCp() throws PokedexException {
         // Test pour vérifier le CP du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals(613, pokemon.getCp());
@@ -63,7 +63,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testGetHp() {
+    public void testGetHp() throws PokedexException {
         // Test pour vérifier le HP du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals(64, pokemon.getHp());
@@ -73,7 +73,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testGetDust() {
+    public void testGetDust() throws PokedexException {
         // Test pour vérifier le Dust du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals(4000, pokemon.getDust());
@@ -83,7 +83,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testGetCandy() {
+    public void testGetCandy() throws PokedexException {
         // Test pour vérifier le Candy du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals(4, pokemon.getCandy());
@@ -93,7 +93,7 @@ public class IPokemonFactoryTest {
     }
 
     @Test
-    public void testGetIv() {
+    public void testGetIv() throws PokedexException {
         // Test pour vérifier le IV du Pokémon créé
         Pokemon pokemon = pokemonFactory.createPokemon(0, 613, 64, 4000, 4);
         assertEquals(56.0, pokemon.getIv());
