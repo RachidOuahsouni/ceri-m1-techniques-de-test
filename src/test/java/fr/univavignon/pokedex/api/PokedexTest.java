@@ -54,17 +54,34 @@ class PokedexTest {
     }
 
     @Test
-    void testGetPokemonsSorted() {
-        Pokemon pokemon1 = new Pokemon(0, "Bulbasaur", 126, 126, 90, 0, 0, 0, 0, 0);
-        Pokemon pokemon2 = new Pokemon(1, "Charmander", 128, 108, 78, 0, 0, 0, 0, 0);
+    void testGetPokemonsEmpty() {
+        List<Pokemon> pokemons = pokedex.getPokemons();
+        assertTrue(pokemons.isEmpty());
+    }
+
+    @Test
+    void testGetPokemonsSortedByCp() {
+        Pokemon pokemon1 = new Pokemon(0, "Bulbasaur", 126, 126, 90, 10, 0, 0, 0, 0);
+        Pokemon pokemon2 = new Pokemon(1, "Charmander", 128, 108, 78, 20, 0, 0, 0, 0);
         pokedex.addPokemon(pokemon1);
         pokedex.addPokemon(pokemon2);
+
         List<Pokemon> sortedPokemons = pokedex.getPokemons(Comparator.comparing(Pokemon::getCp));
-        assertEquals(2, sortedPokemons.size());
         assertEquals(pokemon1, sortedPokemons.get(0));
         assertEquals(pokemon2, sortedPokemons.get(1));
     }
 
+    @Test
+    void testGetPokemonsSortedByHp() {
+        Pokemon pokemon1 = new Pokemon(0, "Bulbasaur", 126, 126, 90, 10, 50, 0, 0, 0);
+        Pokemon pokemon2 = new Pokemon(1, "Charmander", 128, 108, 78, 20, 60, 0, 0, 0);
+        pokedex.addPokemon(pokemon1);
+        pokedex.addPokemon(pokemon2);
+
+        List<Pokemon> sortedPokemons = pokedex.getPokemons(Comparator.comparing(Pokemon::getHp));
+        assertEquals(pokemon1, sortedPokemons.get(0));
+        assertEquals(pokemon2, sortedPokemons.get(1));
+    }
 
     @Test
     void testGetPokemonMetadata() throws PokedexException {
@@ -73,7 +90,6 @@ class PokedexTest {
         PokemonMetadata retrievedMetadata = pokedex.getPokemonMetadata(0);
         assertEquals(metadata, retrievedMetadata);
     }
-
 
     @Test
     void testCreatePokemon() throws PokedexException {
