@@ -19,11 +19,17 @@ jobs:
       - run:
           name: Run Maven Tests with Coverage
           command: mvn clean verify
+      - run:
+          name: Run Checkstyle
+          command: mvn checkstyle:checkstyle
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:
           path: target/site/jacoco
           destination: jacoco-report
+      - store_artifacts:
+          path: target/site/checkstyle.html
+          destination: checkstyle-report
       - save_cache:
           key: cache-{{ checksum "/tmp/CIRCLECI_CACHE_KEY" }}
           paths:
@@ -31,7 +37,6 @@ jobs:
       - codecov/upload:
           file: target/site/jacoco/jacoco.xml
 
-#jout de ces lignes comme indiquer sur le site codecov
 workflows:
   build-and-test:
     jobs:
