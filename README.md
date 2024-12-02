@@ -23,8 +23,7 @@ Durant cette série de TPs, le gestionnaire de version Git sera utilisé à fois
 
 [![CircleCI](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master)
 [![codecov](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test/graph/badge.svg?token=SJZTBVQ2OK)](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test)
-[![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-green)][(https://circleci.com/gh/mon-utilisateur/mon-repository/artefacts?filter=checkstyle.html)](https://output.circle-artifacts.com/output/job/b866564a-169e-45d2-a615-0d5cb43e994f/artifacts/0/checkstyle-report))
-
+[![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-green)](https://output.circle-artifacts.com/output/job/b866564a-169e-45d2-a615-0d5cb43e994f/artifacts/0/checkstyle-report)
 ## Outils et Technologies
 
 - **Langage** : Java
