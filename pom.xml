@@ -55,7 +55,6 @@
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
                     <outputFile>target/checkstyle-result.xml</outputFile>
-                    <outputFormat>xml</outputFormat>
                 </configuration>
                 <executions>
                     <execution>

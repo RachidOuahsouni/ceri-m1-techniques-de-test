@@ -25,23 +25,31 @@ jobs:
       - run:
           name: Update README with Checkstyle Badge
           command: |-
+            # Vérifie si le fichier Checkstyle existe
+            if [ ! -f target/checkstyle-result.xml ]; then
+          echo "Checkstyle report not found: target/checkstyle-result.xml"
+            COLOR="grey"
+            MESSAGE="No_Report"
+            else
             # Analyse le rapport Checkstyle
             ERRORS=$(grep -o '<error' target/checkstyle-result.xml | wc -l)
-
+          
             # Détermine le statut du badge
             if [ "$ERRORS" -eq 0 ]; then
-              COLOR="green"
-              MESSAGE="Passing"
+            COLOR="green"
+            MESSAGE="Passing"
             else
-              COLOR="red"
-              MESSAGE="${ERRORS}_Errors"
+            COLOR="red"
+            MESSAGE="${ERRORS}_Errors"
             fi
-
+            fi
+            
             # Génère l'URL du badge
             BADGE_URL="https://img.shields.io/badge/Checkstyle-${MESSAGE}-${COLOR}"
-
+            
             # Met à jour le fichier README.md
             sed -i "s|!\[Checkstyle\](.*)|![Checkstyle](${BADGE_URL})|" README.md
+
       - run:
           name: Commit Updated README
           command: |-
