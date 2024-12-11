@@ -22,6 +22,34 @@ jobs:
       - run:
           name: Run Checkstyle
           command: mvn checkstyle:checkstyle
+      - run:
+          name: Update README with Checkstyle Badge
+          command: |-
+            # Analyse le rapport Checkstyle
+            ERRORS=$(grep -o '<error' target/checkstyle-result.xml | wc -l)
+
+            # Détermine le statut du badge
+            if [ "$ERRORS" -eq 0 ]; then
+              COLOR="green"
+              MESSAGE="Passing"
+            else
+              COLOR="red"
+              MESSAGE="${ERRORS}_Errors"
+            fi
+
+            # Génère l'URL du badge
+            BADGE_URL="https://img.shields.io/badge/Checkstyle-${MESSAGE}-${COLOR}"
+
+            # Met à jour le fichier README.md
+            sed -i "s|!\[Checkstyle\](.*)|![Checkstyle](${BADGE_URL})|" README.md
+      - run:
+          name: Commit Updated README
+          command: |-
+            git config --global user.email "ci@example.com"
+            git config --global user.name "CircleCI Bot"
+            git add README.md
+            git commit -m "Update Checkstyle Badge [ci skip]" || echo "No changes to commit"
+            git push https://$GH_TOKEN@github.com/<RachidOuahsouni>/<ceri-m1-techniques-de-test>.git HEAD
       - store_test_results:
           path: target/surefire-reports
       - store_artifacts:

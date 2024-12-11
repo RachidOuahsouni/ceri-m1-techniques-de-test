@@ -54,8 +54,8 @@
                 <version>3.2.2</version>
                 <configuration>
                     <configLocation>checkstyle.xml</configLocation>
-                    <encoding>UTF-8</encoding>
-                    <consoleOutput>true</consoleOutput>
+                    <outputFile>target/checkstyle-result.xml</outputFile>
+                    <outputFormat>xml</outputFormat>
                 </configuration>
                 <executions>
                     <execution>
@@ -66,6 +66,7 @@
                     </execution>
                 </executions>
             </plugin>
+
         </plugins>
     </build>
     <dependencies>
