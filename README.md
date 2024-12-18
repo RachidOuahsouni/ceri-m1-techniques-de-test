@@ -20,11 +20,8 @@ Ce projet vous permettra de mettre en pratique divers aspects des techniques de 
 
 ## 🚀 Badges
 [![CircleCI](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master.svg?style=svg&badge=large)](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master)  
-&nbsp;&nbsp;  
 [![codecov](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test/graph/badge.svg?token=SJZTBVQ2OK)](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test)  
-&nbsp;&nbsp;  
 [![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-green?style=for-the-badge&logo=checkstyle)](https://output.circle-artifacts.com/output/job/2ae974df-632e-409d-bd54-662989159dd3/artifacts/0/checkstyle-report)  
-&nbsp;&nbsp;  
 [![Javadoc](https://img.shields.io/badge/docs-Javadoc-blue?style=for-the-badge)](https://rachidouahsouni.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
 
 
