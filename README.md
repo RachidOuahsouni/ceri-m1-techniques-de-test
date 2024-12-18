@@ -24,6 +24,8 @@ Durant cette série de TPs, le gestionnaire de version Git sera utilisé à fois
 [![CircleCI](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master.svg?style=svg)](https://circleci.com/gh/RachidOuahsouni/ceri-m1-techniques-de-test/tree/master)
 [![codecov](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test/graph/badge.svg?token=SJZTBVQ2OK)](https://codecov.io/gh/RachidOuahsouni/ceri-m1-techniques-de-test)
 ![Checkstyle](https://img.shields.io/badge/Checkstyle-Passing-green)
+[![Javadoc](https://img.shields.io/badge/docs-Javadoc-blue)](https://rachidouahsouni.github.io/ceri-m1-techniques-de-test/fr/univavignon/pokedex/api/package-summary.html)
+
 ## Outils et Technologies
 
 - **Langage** : Java
