@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1e7f2fe0-1e09-4ff8-b57f-a63a168c8550" name="Changes" comment="La Configuration et l'intégration de l'outil checkstyle  V3.">
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="1e7f2fe0-1e09-4ff8-b57f-a63a168c8550" name="Changes" comment="Ajout du Rapport du TP6 ." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,6 +38,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Maven. [clean].executor": "Run",
+    "Maven. [site].executor": "Run",
     "Maven.java-project [clean].executor": "Run",
     "Maven.java-project [install].executor": "Run",
     "Maven.java-project [org.apache.maven.plugins:maven-javadoc-plugin:3.4.1:javadoc].executor": "Run",
@@ -55,7 +55,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.importing",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
