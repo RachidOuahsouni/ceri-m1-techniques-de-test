@@ -4,57 +4,56 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
 
 class PokemonFactoryTest {
-    private IPokemonMetadataProvider metadataProvider;
     private RocketPokemonFactory pokemonFactory;
 
     @BeforeEach
     void setUp() {
-        // Créer un mock de IPokemonMetadataProvider
-        metadataProvider = mock(IPokemonMetadataProvider.class);
-        // Initialiser PokemonFactory avec le mock de metadataProvider
+        // Initialiser RocketPokemonFactory
         pokemonFactory = new RocketPokemonFactory();
     }
 
     @Test
-    void testCreatePokemonValid() throws PokedexException {
-        // Configurer le mock pour retourner des métadonnées de Pokémon pour l'index 0
-        PokemonMetadata metadata = new PokemonMetadata(0, "Bulbasaur", 126, 126, 90);
-        when(metadataProvider.getPokemonMetadata(0)).thenReturn(metadata);
-
-        // Créer un Pokémon en utilisant la méthode createPokemon
-        Pokemon pokemon = pokemonFactory.createPokemon(0, 500, 60, 3000, 3);
+    void testCreatePokemonValid() {
+        // Créer un Pokémon avec un index valide (1 pour "Bulbasaur")
+        Pokemon pokemon = pokemonFactory.createPokemon(1, 500, 60, 3000, 3);
 
         // Vérifier que le Pokémon a les valeurs correctes
-        assertEquals(0, pokemon.getIndex());
-        assertEquals("Bulbasaur", pokemon.getName());
-        assertEquals(126, pokemon.getAttack());
-        assertEquals(126, pokemon.getDefense());
-        assertEquals(90, pokemon.getStamina());
+        assertEquals(1, pokemon.getIndex());
+        assertEquals("Bulbasaur", pokemon.getName()); // Vérifie le nom correct pour l'index 1
         assertEquals(500, pokemon.getCp());
         assertEquals(60, pokemon.getHp());
         assertEquals(3000, pokemon.getDust());
         assertEquals(3, pokemon.getCandy());
 
-        // Vérifier que l'IV est compris entre 0 et 100
-        assertTrue(pokemon.getIv() >= 0 && pokemon.getIv() <= 100);
+        // Vérifier que les statistiques sont initialisées même avec des valeurs random
+        assertNotNull(pokemon.getAttack());
+        assertNotNull(pokemon.getDefense());
+        assertNotNull(pokemon.getStamina());
     }
 
     @Test
     void testCreatePokemonInvalidIndex() {
-        // Vérifier que la méthode lance une exception pour un index invalide
-        assertThrows(PokedexException.class, () -> pokemonFactory.createPokemon(-1, 500, 60, 3000, 3));
+        // Créer un Pokémon avec un index invalide (-1)
+        Pokemon pokemon = pokemonFactory.createPokemon(-1, 500, 60, 3000, 3);
+
+        // Vérifier que le Pokémon utilise les valeurs par défaut pour un index invalide
+        assertEquals(-1, pokemon.getIndex());
+        assertEquals("Ash's Pikachu", pokemon.getName());
+        assertEquals(1000, pokemon.getAttack()); // Statistiques pour index invalide
+        assertEquals(1000, pokemon.getDefense());
+        assertEquals(1000, pokemon.getStamina());
+        assertEquals(0, pokemon.getIv());
     }
 
     @Test
-    void testCreatePokemonMetadataException() throws PokedexException {
-        // Configurer le mock pour lancer une exception lorsqu'on demande les métadonnées
-        when(metadataProvider.getPokemonMetadata(0)).thenThrow(new PokedexException("Metadata not found"));
+    void testCreatePokemonMetadataException() {
+        // Vérifier que la classe retourne "MISSINGNO" pour un index absent de la map
+        Pokemon pokemon = pokemonFactory.createPokemon(999, 500, 60, 3000, 3);
 
-        // Vérifier que l'exception est relancée par la méthode createPokemon
-        assertThrows(PokedexException.class, () -> pokemonFactory.createPokemon(0, 500, 60, 3000, 3));
+        // Le Pokémon doit avoir "MISSINGNO" comme nom
+        assertEquals(999, pokemon.getIndex());
+        assertEquals("MISSINGNO", pokemon.getName());
     }
 }
