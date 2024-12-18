@@ -67,8 +67,6 @@ Ce projet vous permettra de mettre en pratique divers aspects des techniques de 
 - **TP4** : 5ème séance  
 - **TP5 & TP6** : Dernière séance  
 
-> Pour chaque rendu, un tag Git correspondant au commit final doit être créé. Si aucun tag n'est précisé, le dernier commit avant la date limite sera utilisé.
-
 ---
 
 ## 📖 Ressources Utiles
