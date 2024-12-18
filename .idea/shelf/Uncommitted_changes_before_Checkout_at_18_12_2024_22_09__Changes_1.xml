@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_18_12_2024_22_09_[Changes]1" date="1734556207987" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2024_22_09_[Changes]1/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 18/12/2024 22:09 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="target/original-java-project-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/original-java-project-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2024_22_09_[Changes]1/original-java-project-1.0-SNAPSHOT.jar" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/jacoco.exec" />
+    <option name="AFTER_PATH" value="target/jacoco.exec" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2024_22_09_[Changes]1/jacoco.exec" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="target/java-project-1.0-SNAPSHOT.jar" />
+    <option name="AFTER_PATH" value="target/java-project-1.0-SNAPSHOT.jar" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_18_12_2024_22_09_[Changes]1/java-project-1.0-SNAPSHOT.jar" />
+  </binary>
+</changelist>
