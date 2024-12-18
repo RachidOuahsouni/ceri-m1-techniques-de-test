@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1e7f2fe0-1e09-4ff8-b57f-a63a168c8550" name="Changes" comment="La Configuration et l'intégration de l'outil checkstyle  V3.">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="2ooA2769j6ZYB69O4EvoqagF0kb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.java-project [clean].executor": "Run",
+    "Maven.java-project [install].executor": "Run",
+    "Maven.java-project [org.apache.maven.plugins:maven-javadoc-plugin:3.4.1:javadoc].executor": "Run",
+    "Maven.java-project [test].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "gh-pages",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/HP/Desktop/ceri-m1-techniques-de-test/.circleci",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "org.infernus.idea.checkstyle.CheckStyleConfigurable",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\ceri-m1-techniques-de-test\.circleci" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Desktop\ceri-m1-techniques-de-test\target\site" />
+      <recent name="C:\Users\HP\Desktop\ceri-m1-techniques-de-test" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.1-openjdk-21.0.1-3183f394aec4-7d648f2c" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1e7f2fe0-1e09-4ff8-b57f-a63a168c8550" name="Changes" comment="" />
+      <created>1731525348684</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1731525348684</updated>
+      <workItem from="1731525355435" duration="461000" />
+      <workItem from="1731525875797" duration="1977000" />
+      <workItem from="1731595161985" duration="780000" />
+      <workItem from="1732206490757" duration="186000" />
+      <workItem from="1733134080056" duration="87000" />
+      <workItem from="1733134199079" duration="5013000" />
+      <workItem from="1733932224744" duration="1894000" />
+      <workItem from="1734014404795" duration="48000" />
+      <workItem from="1734435109410" duration="2513000" />
+    </task>
+    <task id="LOCAL-00001" summary="Ajout du fichier PokedexTest.java .">
+      <option name="closed" value="true" />
+      <created>1731525968380</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1731525968380</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ajout du fichier PokedexTest.java .">
+      <option name="closed" value="true" />
+      <created>1731526149482</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731526149482</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ajout du fichier PokedexTest.java .">
+      <option name="closed" value="true" />
+      <created>1731526480798</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731526480798</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Ajout des fichiers PokemonMetadataProviderTest.java et PokemonFactoryTest.java .">
+      <option name="closed" value="true" />
+      <created>1731526755557</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1731526755557</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Ajout des fichiers PokemonTrainerFactoryTest.java et PokedexFactoryTest.java .">
+      <option name="closed" value="true" />
+      <created>1731527466447</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1731527466447</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Correction du fichier PokedexTest">
+      <option name="closed" value="true" />
+      <created>1731527781663</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1731527781664</updated>
+    </task>
+    <task id="LOCAL-00007" summary="La Configuration et l'intégration de l'outil checkstyle  .">
+      <option name="closed" value="true" />
+      <created>1733141830331</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733141830332</updated>
+    </task>
+    <task id="LOCAL-00008" summary="La Configuration et l'intégration de l'outil checkstyle  .">
+      <option name="closed" value="true" />
+      <created>1733143015616</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1733143015617</updated>
+    </task>
+    <task id="LOCAL-00009" summary="La Configuration et l'intégration de l'outil checkstyle  V2.">
+      <option name="closed" value="true" />
+      <created>1733933000425</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1733933000425</updated>
+    </task>
+    <task id="LOCAL-00010" summary="La Configuration et l'intégration de l'outil checkstyle  V2.">
+      <option name="closed" value="true" />
+      <created>1733933423390</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1733933423390</updated>
+    </task>
+    <task id="LOCAL-00011" summary="La Configuration et l'intégration de l'outil checkstyle  V3.">
+      <option name="closed" value="true" />
+      <created>1733933648563</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1733933648563</updated>
+    </task>
+    <task id="LOCAL-00012" summary="La Configuration et l'intégration de l'outil checkstyle  V3.">
+      <option name="closed" value="true" />
+      <created>1733933902486</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1733933902486</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajout du fichier PokedexTest.java ." />
+    <MESSAGE value="Ajout des fichiers PokemonMetadataProviderTest.java et PokemonFactoryTest.java ." />
+    <MESSAGE value="Ajout des fichiers PokemonTrainerFactoryTest.java et PokedexFactoryTest.java ." />
+    <MESSAGE value="Correction du fichier PokedexTest" />
+    <MESSAGE value="La Configuration et l'intégration de l'outil checkstyle  ." />
+    <MESSAGE value="La Configuration et l'intégration de l'outil checkstyle  V2." />
+    <MESSAGE value="La Configuration et l'intégration de l'outil checkstyle  V3." />
+    <option name="LAST_COMMIT_MESSAGE" value="La Configuration et l'intégration de l'outil checkstyle  V3." />
+  </component>
+</project>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>PokemonFactory.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">java-project</a> &gt; <a href="index.source.html" class="el_package">fr.univavignon.pokedex.api</a> &gt; <span class="el_source">PokemonFactory.java</span></div><h1>PokemonFactory.java</h1><pre class="source lang-java linenums">package fr.univavignon.pokedex.api;
+
+public class PokemonFactory implements IPokemonFactory {
+
+    private final IPokemonMetadataProvider metadataProvider;
+
+    // Constructeur prenant un fournisseur de métadonnées en paramètre
+<span class="fc" id="L8">    public PokemonFactory(IPokemonMetadataProvider metadataProvider) {</span>
+<span class="fc" id="L9">        this.metadataProvider = metadataProvider;</span>
+<span class="fc" id="L10">    }</span>
+
+    @Override
+    public Pokemon createPokemon(int index, int cp, int hp, int dust, int candy) throws PokedexException {
+<span class="fc bfc" id="L14" title="All 2 branches covered.">        if (index &lt; 0) {</span>
+<span class="fc" id="L15">            throw new PokedexException(&quot;Invalid Pokemon index: &quot; + index);</span>
+        }
+
+        try {
+            // Obtenir les métadonnées du Pokémon en fonction de l'index
+<span class="fc" id="L20">            PokemonMetadata metadata = metadataProvider.getPokemonMetadata(index);</span>
+
+            // Utiliser les valeurs de métadonnées pour l'attaque, la défense et l'endurance
+<span class="fc" id="L23">            int attack = metadata.getAttack();</span>
+<span class="fc" id="L24">            int defense = metadata.getDefense();</span>
+<span class="fc" id="L25">            int stamina = metadata.getStamina();</span>
+<span class="fc" id="L26">            double iv = Math.random() * 100; // Calcul d'IV aléatoire pour l'exemple</span>
+
+            // Crée et retourne une instance de Pokemon avec les métadonnées appropriées
+<span class="fc" id="L29">            return new Pokemon(index, metadata.getName(), attack, defense, stamina, cp, hp, dust, candy, iv);</span>
+
+<span class="fc" id="L31">        } catch (PokedexException e) {</span>
+            // Relance l'exception si nécessaire
+<span class="fc" id="L33">            throw e;</span>
+        }
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
