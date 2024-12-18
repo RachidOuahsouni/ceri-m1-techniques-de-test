@@ -2,19 +2,21 @@ package fr.univavignon.pokedex.api;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 class PokemonFactoryTest {
     private IPokemonMetadataProvider metadataProvider;
-    private PokemonFactory pokemonFactory;
+    private RocketPokemonFactory pokemonFactory;
 
     @BeforeEach
     void setUp() {
         // Créer un mock de IPokemonMetadataProvider
         metadataProvider = mock(IPokemonMetadataProvider.class);
         // Initialiser PokemonFactory avec le mock de metadataProvider
-        pokemonFactory = new PokemonFactory(metadataProvider);
+        pokemonFactory = new RocketPokemonFactory();
     }
 
     @Test
