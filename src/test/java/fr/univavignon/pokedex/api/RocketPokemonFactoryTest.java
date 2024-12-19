@@ -17,7 +17,7 @@ public class RocketPokemonFactoryTest {
     @Test
     public void creerPokemonAvecPuissanceCombatNegative() throws PokedexException {
         Pokemon pokemon = factory.createPokemon(0, -5, 50, 100, 10);
-        assertNotNull(pokemon, "Le Pokémon doit être créé même si la puissance de combat est négative.");
+        assertNotNull(pokemon, "Le Pokémon doit  être créé même si la puissance de combat est négative.");
     }
 
     @Test
