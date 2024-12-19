@@ -6,21 +6,21 @@ import java.util.Random;
 
 import org.apache.commons.collections4.map.UnmodifiableMap;
 
-import fr.univavignon.pokedex.api.IPokemonFactory;
-import fr.univavignon.pokedex.api.Pokemon;
-
-<span class="fc" id="L12">public class RocketPokemonFactory implements IPokemonFactory {</span>
+public class RocketPokemonFactory implements IPokemonFactory {
 	
 	static Map&lt;Integer, String&gt; index2name;
 	static {
-<span class="fc" id="L16">		Map&lt;Integer, String&gt; aMap = new HashMap&lt;Integer, String&gt;();</span>
-<span class="fc" id="L17">        aMap.put(-1, &quot;Ash's Pikachu&quot;);</span>
-<span class="fc" id="L18">        aMap.put(0, &quot;MISSINGNO&quot;);</span>
-<span class="fc" id="L19">        aMap.put(1, &quot;Bulbasaur&quot;);</span>
+<span class="fc" id="L13">		Map&lt;Integer, String&gt; aMap = new HashMap&lt;Integer, String&gt;();</span>
+<span class="fc" id="L14">        aMap.put(-1, &quot;Ash's Pikachu&quot;);</span>
+<span class="fc" id="L15">        aMap.put(0, &quot;MISSINGNO&quot;);</span>
+<span class="fc" id="L16">        aMap.put(1, &quot;Bulbasaur&quot;);</span>
         //TODO : Gotta map them all !
-<span class="fc" id="L21">        index2name = UnmodifiableMap.unmodifiableMap(aMap);</span>
+<span class="fc" id="L18">        index2name = UnmodifiableMap.unmodifiableMap(aMap);</span>
+<span class="fc" id="L19">	}</span>
+
+<span class="fc" id="L21">	public RocketPokemonFactory() {</span>
 <span class="fc" id="L22">	}</span>
-	
+
 	static int generateRandomStat() {
 <span class="fc" id="L25">		int total = 0;</span>
 <span class="fc bfc" id="L26" title="All 2 branches covered.">		for(int i=0; i &lt; 1000000; i++)</span>
