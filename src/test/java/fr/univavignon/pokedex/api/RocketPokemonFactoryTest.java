@@ -29,7 +29,7 @@ public class RocketPokemonFactoryTest {
     @Test
     public void creerPokemonAvecPointsVieNegatifs() throws PokedexException {
         Pokemon pokemon = factory.createPokemon(0, 10, -50, 100, 10);
-        assertNotNull(pokemon, "Le Pokémon doit être créé même si les points de vie sont négatifs.");
+        assertNotNull(pokemon, "Le Pokémon doit  être créé même si les points de vie sont négatifs.");
     }
 
     @Test
