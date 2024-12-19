@@ -61,7 +61,7 @@ public class RocketPokemonFactoryTest {
         int candy = 5;
 
         Pokemon pokemon = factory.createPokemon(index, cp, hp, dust, candy);
-        assertNotNull(pokemon, "Le Pokémon doit être correctement créé avec des paramètres valides.");
+        assertNotNull(pokemon, " Le Pokémon doit être correctement créé avec des paramètres valides.");
         assertEquals(index, pokemon.getIndex(), "L'indice du Pokémon doit correspondre à celui passé en paramètre.");
         assertEquals(cp, pokemon.getCp(), "La puissance de combat doit correspondre à celle passée en paramètre.");
         assertEquals(hp, pokemon.getHp(), "Les points de vie doivent correspondre à ceux passés en paramètre.");
