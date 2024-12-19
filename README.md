@@ -51,13 +51,6 @@ Ce projet vous permettra de mettre en pratique divers aspects des techniques de 
 
 ---
 
-## 📂 Structure du Projet
-
-- **`src/`** : Contient les fichiers sources et interfaces du projet.  
-- **`TPs/`** : Regroupe les sujets des différents travaux pratiques.  
-- **`target/`** : Dossier généré contenant les artefacts comme les fichiers Javadoc et les rapports de test.  
-
----
 
 ## 🗓️ Planning des Rendus
 
