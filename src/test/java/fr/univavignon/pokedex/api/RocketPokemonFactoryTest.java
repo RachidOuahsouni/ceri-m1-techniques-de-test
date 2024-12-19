@@ -41,7 +41,7 @@ public class RocketPokemonFactoryTest {
     @Test
     public void creerPokemonAvecIndiceNegatif() throws PokedexException {
         Pokemon pokemon = factory.createPokemon(-1, 0, 0, 0, 0);
-        assertNotNull(pokemon, "Un Pokémon avec un indice négatif doit être créé.");
+        assertNotNull(pokemon, "Un Pokémon  avec un indice négatif doit être créé.");
         assertEquals("Ash's Pikachu", pokemon.getName(), "Le nom du Pokémon doit être 'Ash's Pikachu' pour un indice négatif.");
     }
 
